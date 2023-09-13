@@ -9,6 +9,7 @@ def data_reader(path: str):
     while data_str:
         data_list.append(list())
         data_list[cntr].append(list(float(x) for x in ''.join(data_str).split(' ')))
+        print(''.join(data_str.split('\n')).split(' '))
         data_str = data_obj.readline()
         data_list[cntr].append(list(float(y) for y in ''.join(data_str).split(' ')))
         data_str = data_obj.readline()
