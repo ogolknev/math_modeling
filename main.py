@@ -1,6 +1,6 @@
-import numpy as np
 import matplotlib.pyplot as plt
 
+# Функция чтения данных из указанного файла
 def data_reader(path: str):
     data_obj = open(path)
     data_str = data_obj.readline()
@@ -18,6 +18,7 @@ def data_reader(path: str):
     data_obj.close()
     return data_list
 
+# Функция вывода выбранных графиков на экран
 def data_drawer(path: str, mode):
     data = data_reader(path)
     for i in range(len(data)):
